@@ -5,7 +5,16 @@ html {
   font-size: 16px;
 
 }
-
+@media only screen and (max-width: 760px){
+  body {
+    opacity: 0.7;
+  }
+}
+@media only screen and (max-width: 450px){
+  body {
+    opacity: .1;
+  }
+}
 .main-content {
   position: relative;
   top: 5.3125rem; /* To offset for fixed header. */
@@ -81,8 +90,45 @@ header .mobile {
   display: none;
 }
 
+header .tablet {
+  display: none;
+}
 @media only screen and (max-width: 760px) {
+
+
+  header .mobile {
+    display: none;
+  }
+
+  header .desktop nav{
+    display: none;
+  }
+
+  header .tablet ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  header .tablet li {
+    padding: 0;
+  }
+
+  header .tablet .button {
+    display: block;
+    padding: .1875rem .5rem;
+    background-color: #9dc20b;
+    line-height: 1.6;
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 450px) {
   header .desktop {
+    display: none;
+  }
+  header .tablet {
     display: none;
   }
 

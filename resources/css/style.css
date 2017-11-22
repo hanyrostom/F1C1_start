@@ -236,7 +236,7 @@ header .tablet {
   padding: 1.25rem 7.25rem;
 }
 
-@media only screen and (max-width: 760px) and (min-width: 450px) {
+@media only screen and (max-width: 760px) {
   #sign-up-section {
 max-width: 760px;
     justify-content: center;
@@ -372,7 +372,33 @@ background-color: transparent;
   }
 
 }
+@media only screen and (max-width: 450px) {
+  #features-section {
+display: flex;
+flex-direction: column;
+padding:0;
+width: 100%;
+margin:0 auto;
+  }
 
+  .feature {
+    max-width: 100%;
+    margin: 0 auto:
+padding: 1rem;
+  }
+
+  .image-container {
+    max-height: 15rem;
+
+  }
+  .feature img {
+    width: 100%;
+    height: 5%;
+    margin: 0 auto;
+  }
+
+
+}
 /* Filters Section */
 
 #filters-section {

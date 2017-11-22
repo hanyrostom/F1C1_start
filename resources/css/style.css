@@ -5,9 +5,10 @@ html {
   font-size: 16px;
 
 }
+/*
 @media only screen and (max-width: 760px){
   body {
-    opacity: 0.7;
+    opacity: 1;
   }
 }
 @media only screen and (max-width: 450px){
@@ -15,6 +16,8 @@ html {
     opacity: .1;
   }
 }
+ for testing purposes */
+
 .main-content {
   position: relative;
   top: 5.3125rem; /* To offset for fixed header. */
@@ -85,7 +88,9 @@ header .icon {
   width: 1rem;
   padding-left: .75rem;
 }
-
+  header  .button {
+    display: none;
+  }
 header .mobile {
   display: none;
 }
@@ -93,15 +98,27 @@ header .mobile {
 header .tablet {
   display: none;
 }
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 760px) and (min-width: 450px){
+  header .content{
+    display: flex;
+      justify-content: space-between;
+  }
 
+  nav li {
+    padding-left: 2rem;
+  }
+
+  header .tablet {
+    display: none;
+    width: 100%;
+  }
 
   header .mobile {
     display: none;
   }
 
-  header .desktop nav{
-    display: none;
+  header .desktop ul {
+    display: flex;
   }
 
   header .tablet ul {
@@ -115,12 +132,13 @@ header .tablet {
     padding: 0;
   }
 
-  header .tablet .button {
+  header  .button {
     display: block;
     padding: .1875rem .5rem;
     background-color: #9dc20b;
     line-height: 1.6;
     color: white;
+    margin-left: 1.5rem;
   }
 }
 
@@ -153,6 +171,7 @@ header .tablet {
   }
 
   header .mobile .button {
+    display: flex;
     padding: .1875rem .5rem;
     background-color: #9dc20b;
     line-height: 1.6;
@@ -190,6 +209,7 @@ header .tablet {
   color: white;
 }
 
+
 #sign-up-cta h1 {
   font-size: 3.125rem;
 }
@@ -216,24 +236,34 @@ header .tablet {
   padding: 1.25rem 7.25rem;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 760px) and (min-width: 450px) {
   #sign-up-section {
-    align-items: center;
+max-width: 760px;
     justify-content: center;
     height: 28rem;
+    overflow: hidden;
+
   }
 
+
   #sign-up-cta {
-    position: static;
-    width: auto;
+    position: relative;
+    max-width: 760px;
     height: auto;
-    background-color: transparent;
+background-color: transparent;
     border: none;
+    margin: auto;
+    align-items: center;
+    align-content: center;
+    top: 3rem;
   }
+
 
   #sign-up-cta .content {
     margin-top: 0;
+
   }
+
 
   #sign-up-cta .email {
     display: none;
@@ -294,6 +324,7 @@ header .tablet {
   font-size: 2.25rem;
   font-weight: bold;
   color: #4a4a4a;
+  line-height: 1.2;
 }
 
 .feature h3 {
@@ -316,18 +347,30 @@ header .tablet {
   }
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 760px) and (min-width: 450px){
   #features-section {
-    flex-flow: column;
+
     padding: 0;
 
   }
 
   .feature {
-    margin: 0;
-    padding: 1.25rem 1rem 0 1rem;
+
+    padding: 1rem;
+    margin:  1rem;
 
   }
+  .feature img {
+    width: 105%;
+    height: 5%;
+    margin: 0 auto;
+
+  }
+  .feature h2 {
+    margin-top: 1.5rem;
+
+  }
+
 }
 
 /* Filters Section */
@@ -350,6 +393,7 @@ header .tablet {
 }
 
 #filters-section .content h3 {
+  margin-top: .5rem;
   font-size: 1rem;
   line-height: 1.4;
   font-weight: 300;
@@ -367,26 +411,21 @@ header .tablet {
 
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 760px) and (min-width: 450px) {
   #filters-section {
-    padding: 1.5rem 0 0 0;
+    padding: 2.5rem 0 0 0;
   }
 
   #filters-section .content {
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
   }
 
   #filters-section .content h2 {
     padding-bottom: .625rem;
-    font-size: 1.125rem;
-    line-height: 1.3;
-    font-weight: normal;
+
   }
 
-  #filters-section .content h3 {
-    font-size: .875rem;
-    line-height: 1.4;
-  }
+
 
   #filters-section .images-container {
     padding: 0;
@@ -401,10 +440,13 @@ header .tablet {
 
 #quotes-section {
   background-color: #f3f3f3;
+
 }
 
 #quotes-section .content {
   padding: 5rem 0;
+  display: flex;
+  justify-content: center;
 }
 
 #quotes-section .quote {
@@ -420,7 +462,7 @@ header .tablet {
   height: 1.875rem;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 760px) and (min-width: 450px){
   #quotes-section .content {
     padding: 1.875rem .625rem;
   }
@@ -454,7 +496,7 @@ footer .copyright {
   flex-grow: 1;
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (max-width: 760px) and (min-width: 450px) {
   footer .content {
     font-size: .625rem;
   }
